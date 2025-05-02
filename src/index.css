@@ -1,0 +1,43 @@
+@import "tailwindcss";
+/* default settings */
+body {
+  background-color: white;
+  color: black;
+}
+
+@theme {
+  /* fonts */
+  --font-primary: "Montserrat", "sans-serif";
+  /* colors */
+}
+
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 1800s)
+    var(--animation-direction, forwards) linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-30% - 0.5rem));
+    }
+  }
+}
+
+@layer components {
+  .btn {
+    @apply bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg w-full;
+  }
+  .input {
+    @apply border border-gray-300 p-3 rounded-lg w-full mt-2;
+  }
+}
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+}
+
+.btn-danger {
+  @apply bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded;
+}
+
+.input {
+  @apply border p-2 rounded w-full;
+}
