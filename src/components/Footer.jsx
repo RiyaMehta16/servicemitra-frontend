@@ -90,6 +90,11 @@ const Footer = () => {
                   Email Us
                 </a>
               </li>
+               <li>
+                <a href="/login" className="hover:underline">
+                  Login
+                </a>
+              </li>
             </ul>
           </div>
         </div>
